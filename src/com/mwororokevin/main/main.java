@@ -1,6 +1,9 @@
 package com.mwororokevin.main;
 
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
@@ -9,13 +12,18 @@ import javafx.stage.Stage;
  * @author email mwororokevin@gmail.com
  */
 
-public class main extends Application {
-
-    
+public class main extends Application {    
 
     @Override
     public void start(Stage stage) throws Exception {
-//        Parent root = FXMLLoader.load(getClass().getResource("/com/mwororokevin/application/Application.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/com/mwororokevin/application/Application.fxml"));
+
+        
+        stage.setScene(new Scene(root));
+        
+        stage.setTitle("Number to Words Converter");
+        stage.setResizable(false);
+        stage.show();
     }
     
     public static void main(String[] args) {

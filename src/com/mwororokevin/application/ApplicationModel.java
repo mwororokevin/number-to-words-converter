@@ -1,5 +1,7 @@
 package com.mwororokevin.application;
 
+import java.util.HashMap;
+
 /**
  * @author Kevin Kamau Mwororo
  * @author website mwororokevin.com
@@ -8,6 +10,25 @@ package com.mwororokevin.application;
 
 public class ApplicationModel {
     
+//    Holds the word equivalent of the numbers below Twenty.
+    private HashMap<Integer, String> numbersLessThanTwenty = new HashMap<Integer, String>();
+    
+    /**
+     * Holds the name equivalents of the numbers of the multiples of ten 
+     * e.g Ten, Twenty, ... Fifty and so on
+     */
+    private HashMap<Integer, String> multiplesOfTens = new HashMap<Integer, String>();    
+    
+    /**
+     * Holds the names of the multiples of thousand by thousands i.e 
+     * million, billion, Trillion etc.
+     */
+    private String[] thousands = {"Vigintillion ", "Novemdecillion ", 
+        "Octodecillion ", "Septendecillion ", "Sexdecillion ", "Quindecillion ", 
+        "Quattuordecillion ", "Tredecillion ", "Duodecillion ", "Undecillion ",
+        "Decillion ", "Nonillion ", "Octillion ", "Septillion ", "Sextillion ", 
+        "Quintillion ", "Quadrillion ", "Trillion ", "Billion ", "Million ", 
+        "Thousand ", ""};
     
     /**
      * Takes the Input of type string and returns an array that contains integers 

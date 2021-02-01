@@ -39,7 +39,7 @@
                            </columnConstraints>
                            <rowConstraints>
                               <RowConstraints maxHeight="150.0" minHeight="150.0" prefHeight="150.0" vgrow="SOMETIMES" />
-                              <RowConstraints maxHeight="150.0" minHeight="150.0" prefHeight="150.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="120.0" minHeight="120.0" prefHeight="120.0" vgrow="SOMETIMES" />
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
@@ -90,7 +90,7 @@
                                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="15.0" minWidth="15.0" prefWidth="15.0" />
                                        </columnConstraints>
                                        <rowConstraints>
-                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="120.0" vgrow="SOMETIMES" />
                                        </rowConstraints>
                                        <children>
                                           <AnchorPane GridPane.columnIndex="1">
@@ -102,22 +102,22 @@
                                                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                                    </columnConstraints>
                                                    <rowConstraints>
-                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="120.0" vgrow="SOMETIMES" />
                                                    </rowConstraints>
                                                    <children>
                                                       <AnchorPane>
                                                          <children>
-                                                            <JFXButton layoutX="61.0" layoutY="63.0" onAction="#clearText" text="Clear" />
+                                                            <JFXButton layoutY="38.0" onAction="#clearText" text="Clear" textAlignment="CENTER" />
                                                          </children>
                                                       </AnchorPane>
                                                       <AnchorPane GridPane.columnIndex="1">
                                                          <children>
-                                                            <JFXButton layoutX="61.0" layoutY="63.0" onAction="#copyText" text="Copy" />
+                                                            <JFXButton layoutX="37.0" layoutY="38.0" onAction="#copyText" text="Copy" textAlignment="CENTER" />
                                                          </children>
                                                       </AnchorPane>
                                                       <AnchorPane GridPane.columnIndex="2">
                                                          <children>
-                                                            <JFXButton layoutX="61.0" layoutY="63.0" onAction="#convertNumber" text="Convert" />
+                                                            <JFXButton layoutX="73.0" layoutY="38.0" onAction="#convertNumber" text="Convert" textAlignment="CENTER" />
                                                          </children>
                                                       </AnchorPane>
                                                    </children>

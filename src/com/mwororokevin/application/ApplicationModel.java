@@ -87,6 +87,47 @@ public class ApplicationModel {
         
         return amountArray;
     }
+    
+    /**
+     * Takes a single integer parameter between 1 and 1000 in size and returns a 
+     * String representing the number in words. E.g it takes 1 to 999 and returns
+     * One to Nine Hundred and Ninety Nine.
+     * 
+     * @param number    Of type Integer less than 1000 but greater than 1.
+     * @return          A String representing the number in words
+     */
+    private String getAmounInWords(int number) {
+        String inWords = "";
+        
+        /**
+         * If the number is less than 20 it gets it's value from the 
+         * numbersLessThanTwenty map.
+         * 
+         * If number is less than 100 and greater than 19 it gets its value from 
+         * the combination of the values from the multiplesOfTens and 
+         * numbersLessThanTwenty maps
+         * 
+         * If number is greater than 99 and less than 1000 it gets it's value from 
+         * numbersLessThanTwenty map for the Hundred value and multiplesOfTens 
+         * map for the Tens and the numbersLessThanTwenty for the remainder.
+         */
+        if(number < 20) 
+            inWords = numbersLessThanTwenty.get(number);
+        else if(number > 19 && number < 100) 
+            inWords = multiplesOfTens.get((number / 10)) + 
+                    numbersLessThanTwenty.get((number % 10));
+        else if(number > 99 && number < 1000) {
+            if(number % 100 == 0)
+                inWords = numbersLessThanTwenty.get((number / 100)) + "Hundred ";
+            else
+                inWords = numbersLessThanTwenty.get((number / 100)) + "Hundred and " + 
+                        multiplesOfTens.get((number % 100) / 10) + 
+                        (((number % 100) < 20) ? (numbersLessThanTwenty.get(number % 100)) :
+                        numbersLessThanTwenty.get((number % 10) % 10));
+        }
+        
+        return inWords;
+    }
 }
 
 

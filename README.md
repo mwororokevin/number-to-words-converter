@@ -5,7 +5,9 @@ The string is converted into an array of type string with 3 or less digits long.
 to return the final output.
 With google the maximum number I can get converted is: 999 999 999 999 =
 nine hundred ninety-nine billion nine hundred ninety-nine million nine hundred ninety-nine thousand nine hundred ninety-nine
+
 ![Alt text](/project-images/application.png?raw=true "The Number to Words Convert User Interface")
+
 This system will handle whole numbers upto: 999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999
 which is:
 

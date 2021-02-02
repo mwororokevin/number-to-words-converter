@@ -31,6 +31,12 @@ public class ApplicationModel {
         "Thousand ", ""};
     
     /**
+     * The length of the thousands array. Will be used in combining the entire 
+     * number in figures.
+     */
+    private int thousandsArrayLength = thousands.length;
+    
+    /**
      * Takes the Input of type string and returns an array that contains integers 
      * of the number input.
      * 

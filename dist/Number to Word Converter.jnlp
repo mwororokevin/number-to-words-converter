@@ -14,6 +14,6 @@
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Number to Word Converter" >
     <param name="requiredFXVersion" value="8.0+"/>
   </applet-desc>
-  <jfx:javafx-desc  width="800" height="600" main-class="com.mwororokevin.NumberToWordConverter"  name="Number to Word Converter" />
+  <jfx:javafx-desc  width="800" height="600" main-class="com.mwororokevin.main.main"  name="Number to Word Converter" />
   <update check="always"/>
 </jnlp>

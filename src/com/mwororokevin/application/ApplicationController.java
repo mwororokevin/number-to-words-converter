@@ -25,10 +25,14 @@ public class ApplicationController implements Initializable {
 
     @FXML
     private TextArea outputTextArea;
-
+    
+    /**
+     * Clears the text in the TextArea with the fx id outputTextArea
+     * @param event 
+     */
     @FXML
     private void clearText(ActionEvent event) {
-
+        outputTextArea.setText("");
     }
 
     @FXML

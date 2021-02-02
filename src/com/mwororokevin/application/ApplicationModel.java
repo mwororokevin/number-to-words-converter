@@ -134,6 +134,37 @@ public class ApplicationModel {
         
         return inWords;
     }
+    
+    /**
+     * Takes the number in String form from the TextField and converts it into words.
+     * 
+     * @param number    Of type String containing the number to be converted to words.
+     * @return          A String of the number converted into words.
+     */
+    public String getInWords(String number) {
+        String inWords = "";
+        
+        /**
+         * The Array of type integer converted from the String number by the 
+         * getAmountAsArray Method. It is used to get the digits for conversion
+         * by the getAmounInWords method.
+         */
+        int[] numberArray = getAmountAsArray(number);
+        
+        /**
+         * Loop through the entire array starting with the left most numbers of 
+         * Whole Number to be converted assigning thousands, millions etc from the 
+         * thousands array as needed and adding the rest of the words.
+         */
+        for(int i = 0; i < numberArray.length; i++) {
+            int figure = numberArray[i];
+            
+            inWords += getAmounInWords(figure) + ((figure > 0) ? 
+                    (thousands[(thousandsArrayLength - numberArray.length + i)]) : "");
+        }
+        
+        return inWords;
+    }
 }
 
 

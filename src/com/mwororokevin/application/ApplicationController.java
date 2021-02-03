@@ -19,6 +19,8 @@ import javafx.scene.input.KeyEvent;
 
 public class ApplicationController implements Initializable {
     
+    ApplicationModel appModel = new ApplicationModel();
+    
     @FXML
     private TextField inputTxtField;
 
@@ -29,17 +31,26 @@ public class ApplicationController implements Initializable {
     private TextArea outputTextArea;
     
     /**
-     * Clears the text in the TextArea with the fx id outputTextArea
+     * Clears the text in the TextArea with the FXID outputTextArea
      * @param event 
      */
     @FXML
     private void clearText(ActionEvent event) {
         outputTextArea.setText("");
     }
-
+    
+    /**
+     * Calls the method getInWords from the ApplicationModel class taking the 
+     * input from the textfield and passing it as the methods parameter. 
+     * It then sets the result in the textArea.
+     * @param event 
+     */
     @FXML
     private void convertNumber(ActionEvent event) {
-
+        String numberString = inputTxtField.getText().trim();
+        outputTextArea.setText(appModel.getInWords(numberString));
+        
+        outputTextArea.setWrapText(true);     
     }
 
     @FXML

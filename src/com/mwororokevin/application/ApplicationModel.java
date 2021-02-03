@@ -1,7 +1,5 @@
 package com.mwororokevin.application;
 
-import java.util.HashMap;
-
 /**
  * @author Kevin Kamau Mwororo
  * @author website mwororokevin.com
@@ -11,13 +9,17 @@ import java.util.HashMap;
 public class ApplicationModel {
     
 //    Holds the word equivalent of the numbers below Twenty.
-    private HashMap<Integer, String> numbersLessThanTwenty = new HashMap<Integer, String>();
+    public String[] numbersLessThanTwenty = {"", "One ", "Two ", "Three ", "Four ", 
+        "Five ", "Six ", "Seven ", "Eight ", "Nine ", "Ten ", "Eleven ", "Twelve ", 
+        "Thirteen ", "Fourteen ", "Fifteen ", "Sixteen ", "Seventeen ", "Eighteen ", 
+        "Nineteen "};
     
     /**
      * Holds the name equivalents of the numbers of the multiples of ten 
      * e.g Ten, Twenty, ... Fifty and so on
      */
-    private HashMap<Integer, String> multiplesOfTens = new HashMap<Integer, String>();    
+    public String[] multiplesOfTens = {"", "", "Twenty ", "Thirty ", "Forty ", 
+        "Fifty ", "Sixty ", "Seventy ", "Eighty ", "Ninety "}; 
     
     /**
      * Holds the names of the multiples of thousand by thousands i.e 
@@ -118,18 +120,18 @@ public class ApplicationModel {
          * map for the Tens and the numbersLessThanTwenty for the remainder.
          */
         if(number < 20) 
-            inWords = numbersLessThanTwenty.get(number);
+            inWords = numbersLessThanTwenty[number];
         else if(number > 19 && number < 100) 
-            inWords = multiplesOfTens.get((number / 10)) + 
-                    numbersLessThanTwenty.get((number % 10));
+            inWords = multiplesOfTens[(number / 10)] + 
+                    numbersLessThanTwenty[(number % 10)];
         else if(number > 99 && number < 1000) {
             if(number % 100 == 0)
-                inWords = numbersLessThanTwenty.get((number / 100)) + "Hundred ";
+                inWords = numbersLessThanTwenty[(number / 100)] + "Hundred ";
             else
-                inWords = numbersLessThanTwenty.get((number / 100)) + "Hundred and " + 
-                        multiplesOfTens.get((number % 100) / 10) + 
-                        (((number % 100) < 20) ? (numbersLessThanTwenty.get(number % 100)) :
-                        numbersLessThanTwenty.get((number % 10) % 10));
+                inWords = numbersLessThanTwenty[(number / 100)] + "Hundred and " + 
+                        multiplesOfTens[(number % 100) / 10] + 
+                        (((number % 100) < 20) ? (numbersLessThanTwenty[number % 100]) :
+                        numbersLessThanTwenty[(number % 10) % 10]);
         }
         
         return inWords;

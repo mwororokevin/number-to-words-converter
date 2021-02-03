@@ -1,8 +1,6 @@
-numbertowords
-Converts positive whole numbers to words (A limit of 63 digits) The program takes a number as a string hence it will be able to process a number with a maximum of 63 digits. The string is converted into an array of type string with 3 or less digits long. They are then converted into words and they are put together to return the final output. With google the maximum number I can get converted is: 999 999 999 999 = nine hundred ninety-nine billion nine hundred ninety-nine million nine hundred ninety-nine thousand nine hundred ninety-nine
+Number to Words App Converter
 
-<<<<<<< HEAD
-Alt text
+Converts positive whole numbers to words (A limit of 63 digits) The program takes a number as a string hence it will be able to process a number with a maximum of 63 digits. The string is converted into an array of type string with 3 or less digits long. They are then converted into words and they are put together to return the final output. With google the maximum number I can get converted is: 999 999 999 999 = nine hundred ninety-nine billion nine hundred ninety-nine million nine hundred ninety-nine thousand nine hundred ninety-nine.
 
 This system will handle whole numbers upto: 999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999 which is:
 
@@ -21,4 +19,4 @@ Ninety Nine Octillion Nine Hundred and Ninety Nine Septillion Nine Hundred and N
 Ninety Nine Quintillion Nine Hundred and Ninety Nine Quadrillion Nine Hundred and Ninety Nine Trillion Nine Hundred and 
 Ninety Nine Billion Nine Hundred and Ninety Nine Million Nine Hundred and Ninety Nine Thousand Nine Hundred and Ninety Nine 
 
->>>>>>> 7b866ad54a315376a02c4d1b976a30560af89886
+

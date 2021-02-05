@@ -20,7 +20,7 @@ Hundred and Ninety Nine Quintillion Nine Hundred and Ninety Nine Quadrillion Nin
 Trillion Nine Hundred and Ninety Nine Billion Nine Hundred and Ninety Nine Million Nine Hundred and Ninety 
 Nine Thousand Nine Hundred and Ninety Nine_**
 
-### The Number to Words Convert User Interface
+### The Number to Words Converter User Interface
 ![Alt text](/project-images/application.png?raw=true "The Number to Words Convert User Interface")
 
 This system will handle whole numbers upto: **999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999**

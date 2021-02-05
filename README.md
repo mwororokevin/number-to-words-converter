@@ -3,9 +3,9 @@
 Converts positive whole numbers to words (A limit of 63 digits) The program takes a number as a string hence 
 it will be able to process a number with a maximum of 63 digits. The string is converted into an array of 
 type string with 3 or less digits long. They are then converted into words and they are put together to 
-return the final output. With google the maximum number I can get converted is: 999 999 999 999 = 
-nine hundred ninety-nine billion nine hundred ninety-nine million nine hundred ninety-nine thousand 
-nine hundred ninety-nine.
+return the final output. With google the maximum number I can get converted is: **999,999,999,999** = 
+Nine Hundred Ninety-Nine Billion Nine Hundred Ninety-Nine Million Nine Hundred Ninety-Nine Thousand 
+Nine Hundred Ninety-Nine.
 
 This system will handle whole numbers upto: 
 **999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999** which is:

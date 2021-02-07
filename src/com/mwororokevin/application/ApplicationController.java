@@ -9,6 +9,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.input.Clipboard;
+import javafx.scene.input.ClipboardContent;
 import javafx.scene.input.KeyEvent;
 
 /**
@@ -48,14 +50,21 @@ public class ApplicationController implements Initializable {
     @FXML
     private void convertNumber(ActionEvent event) {
         String numberString = inputTxtField.getText().trim();
-        outputTextArea.setText(appModel.getInWords(numberString));
+        String amountInWords = appModel.getInWords(numberString);
         
-        outputTextArea.setWrapText(true);     
+        outputTextArea.setText(amountInWords);
+        outputTextArea.setWrapText(true);
     }
 
     @FXML
     private void copyText(ActionEvent event) {
-
+        final Clipboard clipboard = Clipboard.getSystemClipboard();
+        final ClipboardContent content = new ClipboardContent();
+        
+        String numberInWords = outputTextArea.getText();
+        content.putString(numberInWords);
+        
+        clipboard.setContent(content);
     }
     
     /**
@@ -81,6 +90,5 @@ public class ApplicationController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         validateNumberInput();
-    }    
-    
+    }        
 }

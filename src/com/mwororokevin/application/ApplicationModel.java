@@ -9,7 +9,7 @@ package com.mwororokevin.application;
 public class ApplicationModel {
     
 //    Holds the word equivalent of the numbers below Twenty.
-    public String[] numbersLessThanTwenty = {"", "One ", "Two ", "Three ", "Four ", 
+    private String[] numbersLessThanTwenty = {"", "One ", "Two ", "Three ", "Four ", 
         "Five ", "Six ", "Seven ", "Eight ", "Nine ", "Ten ", "Eleven ", "Twelve ", 
         "Thirteen ", "Fourteen ", "Fifteen ", "Sixteen ", "Seventeen ", "Eighteen ", 
         "Nineteen "};
@@ -18,7 +18,7 @@ public class ApplicationModel {
      * Holds the name equivalents of the numbers of the multiples of ten 
      * e.g Ten, Twenty, ... Fifty and so on
      */
-    public String[] multiplesOfTens = {"", "", "Twenty ", "Thirty ", "Forty ", 
+    private String[] multiplesOfTens = {"", "", "Twenty ", "Thirty ", "Forty ", 
         "Fifty ", "Sixty ", "Seventy ", "Eighty ", "Ninety "}; 
     
     /**
@@ -55,7 +55,8 @@ public class ApplicationModel {
          * Getting the length of the array by dividing the length of the String by 
          * Three and grouping the numbers into threes. i.e 3,025,369,004.
          */
-        int amountArrayLength = (amountLength % 3 == 0) ? (amountLength / 3) : ((amountLength / 3) + 1);
+        int amountArrayLength = (amountLength % 3 == 0) ? (amountLength / 3) : 
+                ((amountLength / 3) + 1);
         
 //        Initialize the array the method will return with the computed size.
         int[] amountArray = new int[amountArrayLength];
@@ -66,14 +67,14 @@ public class ApplicationModel {
          * The first scenario is when the number is less than 1,000.
          * 
          * The second is when it is greater than 1,000 but the number of digits 
-         * is perfectly divisible by 3. E.g. 4,000,258 or 3,125,586,369,147
+         * is perfectly divisible by 3. E.g. 425,000,258 or 369,125,586,369,147
          * 
          * The last scenario is when the number is greater than a thousand but
          * the total digits are not divisible by 3. E.g 42,258 or 100,258,147,369
          */        
-        if(amountArrayLength <= 3)
+        if(amountArrayLength == 1)
             amountArray[0] = Integer.parseInt(amount);
-        else if(amountArrayLength % 3 == 0) {
+        else if(amountLength % 3 == 0) {
             int j = 0;
             for(int i = 0; i < amountArrayLength; i++){
                 int number = Integer.parseInt(amount.substring(j, j + 3));
@@ -83,15 +84,13 @@ public class ApplicationModel {
         }
         else {
             int j = amountLength % 3;
-            amountArray[0] = Integer.parseInt(amount.substring(0, j));
 
             for(int i = 1; i < amountArrayLength; i++){
                 int number = Integer.parseInt(amount.substring(j, j + 3));
                 amountArray[i] = number;
                 j += 3;
             }
-        }
-        
+        }       
         
         return amountArray;
     }

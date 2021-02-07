@@ -62,7 +62,7 @@
                                                       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                                                    </opaqueInsets>
                                                    <font>
-                                                      <Font name="Ebrima" size="15.0" />
+                                                      <Font name="Cambria" size="18.0" />
                                                    </font>
                                                 </TextField>
                                              </children>
@@ -144,7 +144,7 @@
                                              <children>
                                                 <TextArea fx:id="outputTextArea" prefHeight="200.0" prefWidth="552.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <font>
-                                                      <Font name="Ebrima" size="13.0" />
+                                                      <Font name="Cambria" size="18.0" />
                                                    </font>
                                                 </TextArea>
                                              </children>

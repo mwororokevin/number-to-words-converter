@@ -39,11 +39,12 @@ public class ApplicationController implements Initializable {
     @FXML
     private void clearText(ActionEvent event) {
         outputTextArea.setText("");
+        inputTxtField.setText("");
     }
     
     /**
      * Calls the method getInWords from the ApplicationModel class taking the 
-     * input from the textfield and passing it as the methods parameter. 
+     * input from the TextField and passing it as the methods parameter. 
      * It then sets the result in the textArea.
      * @param event 
      */
@@ -55,7 +56,7 @@ public class ApplicationController implements Initializable {
         outputTextArea.setText(amountInWords);
         outputTextArea.setWrapText(true);
     }
-
+    
     @FXML
     private void copyText(ActionEvent event) {
         final Clipboard clipboard = Clipboard.getSystemClipboard();

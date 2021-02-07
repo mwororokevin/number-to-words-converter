@@ -84,7 +84,8 @@ public class ApplicationModel {
         }
         else {
             int j = amountLength % 3;
-
+            amountArray[0] = Integer.parseInt(amount.substring(0, j));
+            
             for(int i = 1; i < amountArrayLength; i++){
                 int number = Integer.parseInt(amount.substring(j, j + 3));
                 amountArray[i] = number;

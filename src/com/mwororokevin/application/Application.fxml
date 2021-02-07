@@ -70,9 +70,9 @@
                                           <AnchorPane GridPane.rowIndex="1" />
                                           <AnchorPane GridPane.rowIndex="2">
                                              <children>
-                                                <Label fx:id="warningFeedbackLbl" prefHeight="17.0" prefWidth="500.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                                <Label fx:id="warningFeedbackLbl" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="500.0" textAlignment="CENTER" textFill="#d70505" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
                                                    <font>
-                                                      <Font size="13.0" />
+                                                      <Font name="Cambria Bold Italic" size="13.0" />
                                                    </font>
                                                 </Label>
                                              </children>

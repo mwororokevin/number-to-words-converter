@@ -40,6 +40,7 @@ public class ApplicationController implements Initializable {
     private void clearText(ActionEvent event) {
         outputTextArea.setText("");
         inputTxtField.setText("");
+        warningFeedbackLbl.setText("");
     }
     
     /**
@@ -55,6 +56,7 @@ public class ApplicationController implements Initializable {
         
         outputTextArea.setText(amountInWords);
         outputTextArea.setWrapText(true);
+        warningFeedbackLbl.setText("");
     }
     
     @FXML

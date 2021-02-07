@@ -104,7 +104,7 @@ public class ApplicationModel {
      * @param number    Of type Integer less than 1000 but greater than 1.
      * @return          A String representing the number in words
      */
-    private String getAmounInWords(int number) {
+    private String getAmountInWords(int number) {
         String inWords = "";
         
         /**
@@ -161,7 +161,7 @@ public class ApplicationModel {
         for(int i = 0; i < numberArray.length; i++) {
             int figure = numberArray[i];
             
-            inWords += getAmounInWords(figure) + ((figure > 0) ? 
+            inWords += getAmountInWords(figure) + ((figure > 0) ? 
                     (thousands[(thousandsArrayLength - numberArray.length + i)]) : "");
         }
         
